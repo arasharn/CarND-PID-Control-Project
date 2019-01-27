@@ -2,6 +2,21 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+## Tuning the PID Controller
+
+A **P**roportional, **I**ntegral and **D**ifferential (PID) controller was used in this project. As the name indicates, this controller consists of three separate parts that for this project:
+
+### P:   
+
+Simply calculates the steering angle as the error scaled by a proportional factor. This means, existing any error in the system always result in an overshoot in the system.
+
+### I:
+
+Continuously adding up the error and scaling it by the i-factor that results in the area under the error curve. This area accounts for the accumulating error during the  overall run.
+
+### D:
+
+This term uses the difference between the previous and current time step to  controll the overshoot caused by the P controller and allows the control signal to asymptotically approach the goal trajectory.
 
 ## Dependencies
 
