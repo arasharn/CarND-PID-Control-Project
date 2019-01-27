@@ -6,18 +6,22 @@ Self-Driving Car Engineer Nanodegree Program
 
 A **P**roportional, **I**ntegral and **D**ifferential (PID) controller was used in this project. As the name indicates, this controller consists of three separate parts that for this project:
 
-### P:   
+#### P:   
 
 Simply calculates the steering angle as the error scaled by a proportional factor. This means, existing any error in the system always result in an overshoot in the system.
 
-### I:
+#### I:
 
 Continuously adding up the error and scaling it by the i-factor that results in the area under the error curve. This area accounts for the accumulating error during the  overall run.
 
-### D:
+#### D:
 
 This term uses the difference between the previous and current time step to  controll the overshoot caused by the P controller and allows the control signal to asymptotically approach the goal trajectory.
 
+
+### Hyperparameter Selection
+
+Initially the parameter from the lecture were chosen $(0.2, 3.0, 0.004)$. Then the parameter were adjusted step by step  manually by comparing the result in the simulation, until the car smoothly until the car ran smoothly without too much overshoot and constant drift to one side. Final values were chosen as $(0.1, 4.0, 0.0001)$.
 ## Dependencies
 
 * cmake >= 3.5
